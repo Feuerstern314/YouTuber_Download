@@ -7,7 +7,8 @@ Downloader to download videos and playlist
 
 # Run
 Run "__main__.py"  with python3.7
-Type: playlist/video
+Type: playlist/video or playlists/videos (seperator: ;)
+Output: mp3/mp4
 URL: https://youtube.com/?watch=ABCDEF or ABCDEF
 Download y/n
 
