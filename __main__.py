@@ -16,9 +16,16 @@ def setup_playlist():
     playlist = pafy.get_playlist(input('URL: '))
 
     print('Infos: ' + get_infos_about_playlist(playlist))
+    items = playlist['items']
+    isg_filesize = 0
+    for i in items:
+        isg_filesize = isg_filesize + i['pafy'].getbest().get_filesize()
+    ff = isg_filesize / 1000000000
+    print(f'Filesize: {ff} GB')
     i = input('Donwload? y/n')
     if i.lower() == 'y' or i.lower() == 'j':
-        items = playlist['items']
+
+
         print(f'Length: {len(items)}')
         os.mkdir(playlist['title'])
         l = len(items)
