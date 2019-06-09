@@ -17,12 +17,14 @@ def setup_playlist():
 
     print('Infos: ' + get_infos_about_playlist(playlist))
     items = playlist['items']
-    isg_filesize = 0
-    for i in items:
-        isg_filesize = isg_filesize + i['pafy'].getbest().get_filesize()
-    ff = isg_filesize / 1000000000
-    print(f'Filesize: {ff} GB')
-    i = input('Donwload? y/n')
+    i = input('See filesize y/n ')
+    if i.lower() == 'y' or i.lower() == 'j':
+        isg_filesize = 0
+        for i in items:
+            isg_filesize = isg_filesize + i['pafy'].getbest().get_filesize()
+        ff = isg_filesize / 1000000000
+        print(f'Filesize: {ff} GB')
+    i = input('Download? y/n')
     if i.lower() == 'y' or i.lower() == 'j':
 
 
