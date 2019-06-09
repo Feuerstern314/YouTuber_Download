@@ -57,3 +57,4 @@ if t.lower() == 'playlist':
     setup_playlist()
 else:
     setup_video()
+#END
