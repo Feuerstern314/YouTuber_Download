@@ -97,5 +97,7 @@ if t.lower() == 'playlist':
     setup_playlist(output)
 elif t.lower() == 'playlists':
     iterate_playlist(output)
+elif t.lower() == 'videos':
+    iterate_video(output)
 else:
     setup_video(output)
