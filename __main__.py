@@ -11,7 +11,7 @@ def get_infos_about_video(video) -> str:
     author = video.author
     duration = video.duration
 
-    print(f'Title: \'{title}\'  Author: \'{author}\'  Duration: \'{duration}\'')
+    return f'Title: \'{title}\'  Author: \'{author}\'  Duration: \'{duration}\''
 def setup_playlist():
     playlist = pafy.get_playlist(input('URL: '))
 
