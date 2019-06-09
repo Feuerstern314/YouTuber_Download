@@ -37,6 +37,7 @@ def setup_playlist():
             download = item.getbest().download(filepath=playlist['title'])
             r = i
             procent = r / l
+            procent = round(procent, 2)
             print(f'{procent  * 100}%')
         print('Finished')
         return
